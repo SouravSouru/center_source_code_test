@@ -3,9 +3,9 @@ import 'package:http/http.dart' as http;
 class ApiService{
 
 
-  Future<ImageModel> getData(String searchIteam,String pageNumber)async{
+  Future<ImageModel> getData(String searchIteam,String iteamCount)async{
     String apikey ="29897489-eeece90fdef3beaec6d4284f7";
-    String urls ="https://pixabay.com/api/?key=$apikey&q=$searchIteam&image_type=photo&page=1&per_page=$pageNumber";
+    String urls ="https://pixabay.com/api/?key=$apikey&q=$searchIteam&image_type=photo&page=1&per_page=$iteamCount";
 
     print("function called");
     var response = await http.get(Uri.parse(urls));

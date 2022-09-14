@@ -9,8 +9,8 @@ class ImageGetxController extends GetxController{
   var imageModel = ImageModel().obs;
 
 
-  void Getdata(String searchIteam,String pageNumber) async{
-    var response = await ApiService().getData(searchIteam,pageNumber);
+  void Getdata(String searchIteam,String iteamCount) async{
+    var response = await ApiService().getData(searchIteam,iteamCount);
     if(response.hits!.isNotEmpty){
       imageModel.value = response;
       loaded.value = true;
